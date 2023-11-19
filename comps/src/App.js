@@ -1,25 +1,27 @@
-import Button from './Button';
+import Accordion from "./Components/Accordion";
 
 function App() {
-    return (
-        <div>
-            <div>
-                <Button>Click me!!</Button>
-            </div>
-            <div>
-                <Button>Buy Now!!</Button>
-            </div>
-            <div>
-                <Button>See Deal!!</Button>
-            </div>
-            <div>
-                <Button>Hide Ads!!</Button>
-            </div>
-            <div>
-                <Button>Something!!</Button>
-            </div>
 
-        </div>
+    const items = [
+        {
+            id: 'dkf4',
+            label: 'Can i use React?',
+            content: 'Yadkfjakldfjkajdfakljfaklfjkasjdfklasjfdkasjdfaksfdj'
+    },
+        {
+            id: 'dkf4s',
+            label: 'Can i use React?',
+            content: 'Yadkfjakldfjkajdfakljfaklfjkasjdfklasjfdkasjdfaksfdj'
+    },
+        {
+            id: 'dkf64',
+            label: 'Can i use React?',
+            content: 'Yadkfjakldfjkajdfakljfaklfjkasjdfklasjfdkasjdfaksfdj'
+    }
+]
+
+    return (
+        <Accordion items={items} />
     )
 }
 
