@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GoChevronDown } from "react-icons/go";
 import Panel from './Panel';
 
 function Dropdown({ options, value, onChange }) {
     // State for opening and closing the dropdown list!
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const handler = (event) => {
+            console.log(event.target);
+        }
+        document.addEventListener('click', handler);
+    }, []);
 
     // Opens the dropdown list when "Select..." is clicked
     // so that an option can be selected
