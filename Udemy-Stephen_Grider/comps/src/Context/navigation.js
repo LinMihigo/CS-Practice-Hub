@@ -1,9 +1,9 @@
-import { children, useEffect } from "react";
+import { useEffect } from "react";
 import { createContext, useState,  } from "react";
 
-const NavigationContext = createContext();
+const NavigationContext = createContext(); //
 
-function NavigationProvider ( { children }) {
+function NavigationProvider ( { children }) { // 
 
     const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
