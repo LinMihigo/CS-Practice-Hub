@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { GoChevronDown } from "react-icons/go";
 import Panel from './Panel';
 
@@ -6,11 +6,26 @@ function Dropdown({ options, value, onChange }) {
     // State for opening and closing the dropdown list!
     const [isOpen, setIsOpen] = useState(false);
 
+    const divEl = useRef();
+
     useEffect(() => {
         const handler = (event) => {
-            console.log(event.target);
+            if (!divEl.current) {
+                return;
+            }
+
+            // Check if divEl.current doesn't contain the element that's been
+            // clicked on. If it doesn't, we close the dropdown.
+            if (!divEl.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+
         }
         document.addEventListener('click', handler);
+
+        return () => {
+            document.removeEventListener('click', handler, true);
+        }
     }, []);
 
     // Opens the dropdown list when "Select..." is clicked
@@ -40,7 +55,7 @@ function Dropdown({ options, value, onChange }) {
     });
 
     return (
-        <div className='w-60 relative'>
+        <div ref={divEl} className='w-60 relative'>
             <Panel className='flex justify-between items-center cursor-pointer' onClick={handleClick}>
                 {/* the ? in selection?. label checks if selection is null and
                     if it's not, the label will be shown. 
