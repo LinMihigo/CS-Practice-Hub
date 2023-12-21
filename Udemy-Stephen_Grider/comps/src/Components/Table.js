@@ -31,7 +31,7 @@ function Table( { data, config, keyFn }) {
             <tbody>
                 { renderedRows }
             </tbody>
-       </table> 
+       </table>
     )
 }
 
