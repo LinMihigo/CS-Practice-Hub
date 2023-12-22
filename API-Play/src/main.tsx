@@ -5,9 +5,9 @@ import { Navigator } from "./Context/navigation";
 import App from "./App.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <Navigator>
     <React.StrictMode>
-      <App />
+      <Navigator>
+        <App />
+      </Navigator>
     </React.StrictMode>
-  </Navigator>,
 );
