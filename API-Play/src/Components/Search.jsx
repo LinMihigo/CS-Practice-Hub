@@ -1,13 +1,13 @@
-function Words({ onSubmit }) {
+function Search({ onSubmit }) {
 
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <input name='search' type="text" />
+        <input className="border border-indigo-500/50" name='search' type="text" />
         <button type='submit'>Search</button>
       </form>
     </div>
   );
 }
 
-export default Words;
+export default Search;

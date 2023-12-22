@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Words from "../Components/Words";
+import Search from "../Components/Search";
 import axios from 'axios';
 
 function WordsDescribed() {
@@ -35,9 +35,9 @@ function WordsDescribed() {
 
   return (
     <div>
-      <Words onSubmit={handleSubmit} />
+      <Search onSubmit={handleSubmit} />
       <div>{ description.word }</div>
-      <div>{ description && description.results && description.results[0] ? description.results[0].definition : 'Loading...' }</div>
+      <div>{ description && description.results ? description.results.map((definition, i, results) => <div key={results.indexOf(definition)}>{definition.definition}</div>) : 'Loading...' }</div>
     </div>
   );
 }
