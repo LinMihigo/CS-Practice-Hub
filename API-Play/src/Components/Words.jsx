@@ -1,20 +1,11 @@
-import { useState } from "react";
-function Words() {
-  const [value, setValue] = useState();
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  const handleClick = () => {
-    console.log("Click!");
-  };
+function Words({ onSubmit }) {
 
   return (
     <div>
-      <input type="text" onChange={handleChange} value={value} />
-      <button onClick={handleClick}>Search</button>
-      <div>{value}</div>
+      <form onSubmit={onSubmit}>
+        <input name='search' type="text" />
+        <button type='submit'>Search</button>
+      </form>
     </div>
   );
 }

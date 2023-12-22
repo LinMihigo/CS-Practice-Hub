@@ -5,6 +5,7 @@ function SideBar() {
     { label: "Home", path: "/" },
     { label: "Words descriptions", path: "/WordsDescribed" },
     { label: "Numbers facts", path: "/Numbers" },
+    { label: "Api call", path: "/ApiCall"},
   ];
 
   const renderedLinks = links.map((link) => {

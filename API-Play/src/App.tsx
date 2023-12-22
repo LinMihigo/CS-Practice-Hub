@@ -3,6 +3,7 @@ import Numbers from "./Components/Numbers";
 import WordsDescribed from "./Pages/WordsDescribed";
 import Route from "./Components/Route";
 import HomePage from "./Components/HomePage";
+import ApiCall from "./Pages/ApiCall";
 
 //Goin to build a sidebar of words description with text to speech for results & Numbers facts retrieval page.
 function App() {
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/Numbers">
           <Numbers />
+        </Route>
+        <Route path="/ApiCall">
+          <ApiCall />
         </Route>
       </div>
     </div>
