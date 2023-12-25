@@ -14,13 +14,11 @@ const carsSlice = createSlice({
             state.data.push({
                 name: action.payload.name,
                 cost: action.payload.cost,
-                id: nanoid()
+                id: nanoid() //function part of redux toolkit to generate id
             });
         },
         removeCar(state, action) {
-            const updated = state.data.filter((car) => {
-                return car.id !== action.payload
-            })
+            const updated = state.data.filter(car => car.id !== action.payload);
 
             state.data = updated;
         }
