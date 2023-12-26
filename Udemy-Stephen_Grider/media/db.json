@@ -1,5 +1,26 @@
 {
-    "users": [],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "name": "Dr. Bob Robel",
+      "id": 2
+    },
+    {
+      "name": "Jesus Schroeder-Padberg",
+      "id": 3
+    },
+    {
+      "name": "Yolanda Hayes",
+      "id": 4
+    },
+    {
+      "name": "Mrs. Georgia Armstrong DDS",
+      "id": 5
+    },
+    {
+      "name": "Mrs. Miranda Cronin",
+      "id": 6
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
