@@ -1,22 +1,52 @@
 {
   "users": [
     {
-      "name": "Dr. Bob Robel",
+      "name": "Jesus Schroeder-Padberg",
+      "id": 3
+    }
+  ],
+  "albums": [
+    {
+      "userId": 3,
+      "title": "Electronic Cotton Sausages",
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "title": "Awesome Rubber Salad",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "title": "Handmade Steel Hat",
+      "id": 14
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 5,
+      "url": "https://loremflickr.com/150/150/abstract?lock=2381894536658944",
       "id": 2
     },
     {
-      "name": "Jesus Schroeder-Padberg",
+      "albumId": 5,
+      "url": "https://loremflickr.com/150/150/abstract?lock=2901780673331200",
       "id": 3
     },
     {
-      "name": "Yolanda Hayes",
+      "albumId": 9,
+      "url": "https://loremflickr.com/150/150/abstract?lock=3332023485726720",
       "id": 4
     },
     {
-      "name": "Mrs. Georgia Armstrong DDS",
+      "albumId": 9,
+      "url": "https://loremflickr.com/150/150/abstract?lock=1216350125031424",
       "id": 5
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=6194850972041216",
+      "id": 6
     }
-  ],
-  "albums": [],
-  "photos": []
+  ]
 }
